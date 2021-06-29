@@ -1,0 +1,48 @@
+@startuml
+interface DomainService extends DomainUpdateService{
+    void deleteOtherDomain(Long id)
+
+}
+
+note left of DomainService: interface DomainService \nextends DomainUpdateService
+interface DomainSearchService {
+    String findById(Long id);
+
+    List<String> findByName(String name);
+}
+
+interface DomainUpdateService {
+    String create(String str);
+
+    String update(Long id, String str);
+}
+
+class DomainServiceImpl implements DomainService {
+
+    String create(String str);
+
+    String update(Long id, String str);
+}
+
+class DomainSearchServiceImpl implements DomainSearchService {
+    String findById(Long id);
+
+    List<String> findByName(String name);
+
+    void deleteOtherDomain(Long id)
+}
+
+
+class DomainController {
+    DomainSearchService service
+
+    String findById(Long id)
+
+}
+
+DomainController *-- DomainSearchService : Injected
+note left of DomainServiceImpl: Refactored out search methods
+note left of DomainController: No further changes\nInversion of Control
+note right of DomainSearchServiceImpl: Created new Impl
+
+@enduml
