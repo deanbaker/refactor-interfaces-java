@@ -13,16 +13,6 @@ import java.util.List;
 public class DomainServiceImpl implements DomainService{
 
     @Override
-    public String findById(Long id) {
-        return "Str " + id;
-    }
-
-    @Override
-    public List<String> findByName(String name) {
-        return null;
-    }
-
-    @Override
     public String create(String str) {
         return null;
     }

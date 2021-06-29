@@ -7,7 +7,7 @@ import java.util.List;
  * It has evolved over the years to be a bit of a dumping ground for
  * all operations that may (or may not) relate to a domain.
  */
-public interface DomainService extends DomainSearchService, DomainUpdateService {
+public interface DomainService extends DomainUpdateService {
 
 
       // Something like the below can muddy the waters. We'll omit this for
