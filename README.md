@@ -61,7 +61,8 @@ We will look to extract out all the operations relevant to searching the Domain 
 ![](docs/step-2-extract-search.png)
 
 You will note that no changes have been done to any **Production** code apart from the addition of the new interface,
-and the moving around of some public methods. The `DomainController` OR the `DomainServiceImpl` have been modified.
+and the moving around of some public methods. The `DomainController` OR the `DomainServiceImpl` have not been modified.
+That solid line with see-through arrow means `DomainService extends DomainSearchService`. 
 
 ### Step Two B
 ```shell
