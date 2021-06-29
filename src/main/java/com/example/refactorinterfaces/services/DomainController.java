@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class DomainController {
 
-    private final DomainService domainService;
+    private final DomainSearchService domainService;
 
-    public DomainController(DomainService domainService) {
+    public DomainController(DomainSearchService domainService) {
         this.domainService = domainService;
     }
 
